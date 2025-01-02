@@ -8,8 +8,7 @@ import { useMenuStore } from './store/store'
 
 
 function App() {
-  const getMenu = useMenuStore(state => state.getMenu)
-  const menu = useMenuStore(state => state.menu)
+  const getMenu = useMenuStore((state:any) => state.getMenu)
 
   useEffect(() => {
       getMenu()   

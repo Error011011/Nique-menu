@@ -2,22 +2,23 @@ import { FC } from "react";
 import { useMenuStore } from "../store/store";
 
 interface ISection {
-    id: String
-    title: String
+    id: string
+    title: string
     items: IItem[]
 }
 
 interface IItem {
-    name: String
-    price: Number
-    description: String
-    img: String
-    tags: String[]
+    name: string
+    price: number
+    oldPrice: number
+    description: string
+    img: string
+    tags: string[]
 }
 
 export const Menu:FC = () => {
 
-    const menu = useMenuStore(state => state.menu)
+    const menu = useMenuStore((state:any) => state.menu)
     
     
     return (
@@ -48,7 +49,7 @@ export const Menu:FC = () => {
                                     <ul>
                                         {
                                             items.map((item: IItem) => {
-                                                const {name, price, oldPrice, description, img, tags} = item
+                                                const {name, price, oldPrice, description, img} = item
 
                                                 return (
                                                     <li className="py-[16px] pl-[16px] pr-[24px] relative flex gap-3 items-center lg:text-[20px]">
