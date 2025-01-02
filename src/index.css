@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Bitter Rose";
+    src: url(/src/assets/fonts/bitter-rose/BitterRoseDEMO-Regular.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: "Chillax";
+    src: url(/src/assets/fonts/chillax/Chillax-Regular.woff2) format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url(/src/assets/fonts/grotesk/CabinetGrotesk-Medium.woff2) format('woff2');
+  }
+
+  .container {
+    @apply my-0 mx-auto w-[100%] px-[15px] box-border
+  }
+}
+
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+  color: #fff;
+}
+
+a {
+  
+}
